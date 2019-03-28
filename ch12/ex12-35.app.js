@@ -1,0 +1,7 @@
+export default express()
+  .use(logger)
+  .use(fileAssets)
+  .use(bodyParser.json())
+  .use(addStoreToRequestPipeline)
+  .use('/api', api)
+  .use(matchRoutes)
